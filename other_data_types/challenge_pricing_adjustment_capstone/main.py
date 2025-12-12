@@ -2,4 +2,32 @@ grocery_inventory = {"Milk": ("Dairy", 3.50, 8), "Eggs": ("Dairy", 5.50, 30), "B
 
 eggs_price = grocery_inventory["Eggs"][1]
 
-print(eggs_price)
+if eggs_price > 5:
+    print("eggs are too expensive, reducing the price by $1.")
+    category, _, stock = grocery_inventory["Eggs"]
+    grocery_inventory["Eggs"] = (category, eggs_price - 1, stock)
+else:
+    print("The price of eggs are reasonable")
+
+grocery_inventory.update({"Tomatoes": ("Produce", 1.20, 30)})
+
+print("Inventory after adding Tomatoes: ", grocery_inventory)
+
+milk_stock = grocery_inventory["Milk"][2]
+
+if milk_stock < 10:
+    print("milk needs to be restocked. increasing stock by 20 units.")
+    category, milk_price, _ = grocery_inventory["Milk"]
+    grocery_inventory["Milk"] = (category, milk_price, milk_stock + 20)
+else: 
+    print("Milk has sufficient stock")
+
+apples_price = grocery_inventory["Apples"][1]
+
+if apples_price > 2:
+    grocery_inventory.pop("Apples")
+    print("Apples removed from inventory due to high price")
+
+print("Updated inventory:", grocery_inventory)
+
+    
