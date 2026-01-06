@@ -21,3 +21,18 @@ revenue_per_product = list(zip(products, revenue))
 
 # Task 5: Display the sorted revenues
 formatted_output(revenue_per_product)
+
+Task
+Completed
+Follow these step-by-step instructions to complete the task:
+Initialize a list named products that contains the product names;
+Initialize a list named prices that contains the price per item for each product;
+Initialize a list named quantities_sold that contains the number of items sold for each product;
+Calculate the revenue for each product by multiplying the price by the quantity sold, and store all results in a new list called revenue;
+Use the zip() function to combine the products and revenue lists into a list of tuples named revenue_per_product, where each tuple contains a product name and its corresponding revenue;
+Sort the revenue_per_product list alphabetically by product name;
+Print each product and its revenue using this format: <product_name> has total revenue of $<revenue>.
+You must define the following functions:
+calculate_revenue(prices, quantities_sold): This function should multiply each price by its corresponding quantity sold, store the results in a list, and return this list of revenues.
+formatted_output(revenues): This function should take a list of (product_name, revenue) tuples, sort them alphabetically by product name, and print each in the specified format.
+After defining these functions, use the provided lists to call them and display the results as described above.
